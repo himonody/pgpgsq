@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+{$smarty.now}<br>
+{$smarty.now nocache}
+
+{nocache}
+	{$smarty.now}
+{/nocache}
+
+
+<hr>
+{for $i=1 to 5}
+	{$i}：锄禾日当午<br>
+{/for}
+
+
+
+</body>
+</html>

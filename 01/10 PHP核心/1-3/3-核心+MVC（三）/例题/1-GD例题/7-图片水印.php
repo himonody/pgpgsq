@@ -1,0 +1,14 @@
+<?php
+//第一步：打开源图
+$src_img=imagecreatefromjpeg('./water.jpg');
+//第二步：打开目标图
+$dst_img=imagecreatefromjpeg('./face.jpg');
+//第三步：将源图复制到目标图上
+$dst_x=imagesx($dst_img)-imagesx($src_img);
+$dst_y=imagesy($dst_img)-imagesy($src_img);
+$src_w=imagesx($src_img);
+$src_h=imagesy($src_img);
+imagecopy($dst_img,$src_img,$dst_x,$dst_y,0,0,$src_w,$src_h);
+//显示水印图
+header('content-type:image/jpeg');
+imagejpeg($dst_img);

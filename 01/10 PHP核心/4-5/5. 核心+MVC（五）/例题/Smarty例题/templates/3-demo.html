@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<table border='1' bordercolor='#000' width='780'>
+	<tr>
+		<th>是否是第一个元素</th>
+		<th>索引</th>
+		<th>编号</th>
+		<th>键</th>
+		<th>值</th>
+		<th>是否是最后一个元素</th>
+	</tr>
+	{foreach $stu as $k=>$v}
+	<tr>
+		<td>{$v@first}</td>
+		<td>{$v@index}</td>
+		<td>{$v@iteration}</td>
+		<td>{$k}</td>
+		<td>{$v}</td>
+		<td>{$v@last}</td>
+	</tr>
+	{foreachelse}
+		没有输出
+	{/foreach}
+</table>
+</body>
+</html>

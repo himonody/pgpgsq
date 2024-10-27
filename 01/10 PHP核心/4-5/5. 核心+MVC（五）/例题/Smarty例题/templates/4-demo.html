@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table border='1' bordercolor='#000' width='780'>
+	<tr>
+		<th>是否是第一个元素</th>
+		<th>索引</th>
+		<th>编号</th>
+		<th>值</th>
+		<th>是否是最后一个元素</th>
+	</tr>
+	{section name=s loop=$stu}
+	<tr>
+		<td>{$smarty.section.s.first}</td>
+		<td>{$smarty.section.s.index}</td>
+		<td>{$smarty.section.s.iteration}</td>
+		<td>{$stu[s]}</td>
+		<td>{$smarty.section.s.last}</td>
+	</tr>
+	{sectionelse}
+		没有输出
+	{/section}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+{if is_numeric($smarty.get.score)}    {#判断是否是数字#}
+	{if $smarty.get.score gte 90}
+		A
+	{elseif $smarty.get.score gte 80}
+		B
+	{else}
+		C
+	{/if}
+{else}
+	不是数字
+{/if}
+
+<hr>
+{if $smarty.get.score is even}
+	是偶数
+{elseif $smarty.get.score is odd}
+	是奇数
+{/if}
+</body>
+
+</html>
